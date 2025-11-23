@@ -6,14 +6,18 @@
   <title>A Level Maths</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="black-bg">
 
-  <video autoplay muted loop id="bgVideo">
-    <source src="LITERALLY ME 1.mp4" type="video/mp4">
+  <div id="enterScreen">
+    <h1 id="enterText">Enter</h1>
+  </div>
+
+  <video id="bgVideo" muted>
+    <source src="LITERALLY%20ME%201.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <div id="content" class="hidden">
+  <div id="mainContent" class="hidden">
     <h1 class="delayed-title">A level maths textbooks for edexcel</h1>
     <div class="button-group">
       <a href="pure.html" class="pill-button">Pure</a>
@@ -22,9 +26,21 @@
   </div>
 
   <script>
-    setTimeout(() => {
-      document.getElementById('content').classList.remove('hidden');
-    }, 24000);
+    const enterText = document.getElementById("enterText");
+    const video = document.getElementById("bgVideo");
+    const mainContent = document.getElementById("mainContent");
+    const enterScreen = document.getElementById("enterScreen");
+
+    enterText.addEventListener("click", () => {
+      enterScreen.style.display = "none";
+      video.play();
+      video.setAttribute("autoplay", true);
+      video.setAttribute("muted", false);
+      setTimeout(() => {
+        mainContent.classList.remove("hidden");
+      }, 24000);
+    });
   </script>
+
 </body>
 </html>
