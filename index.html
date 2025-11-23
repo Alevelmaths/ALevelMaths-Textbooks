@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Level Maths | Edexcel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Level Maths</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="home">
-    <h1 class="gradient-title">A level maths textbooks for edexcel</h1>
+
+  <video autoplay muted loop id="bgVideo">
+    <source src="LITERALLY ME 1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div id="content" class="hidden">
+    <h1 class="delayed-title">A level maths textbooks for edexcel</h1>
     <div class="button-group">
       <a href="pure.html" class="pill-button">Pure</a>
       <a href="applied.html" class="pill-button">Applied</a>
     </div>
-  </main>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('content').classList.remove('hidden');
+    }, 24000);
+  </script>
 </body>
 </html>
